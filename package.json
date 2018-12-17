@@ -1,0 +1,21 @@
+{
+  "name": "company-site-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "make-tables": "node script/tables/index.js",
+    "insert-data": "node script/data/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "company-site-db"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.376.0",
+    "fs": "0.0.1-security"
+  }
+}
