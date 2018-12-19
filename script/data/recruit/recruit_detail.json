@@ -1,7 +1,8 @@
 [
   {
     "recruit_id": 1,
-    "update": "20160103",
+    "update": "2016-01-03 09:00:00:000",
+    "end": false,
     "occupation": "UI/UXデザイナー",
     "businessContent": "弊社サービスのXXXXのデザインからコーディングを担当していただきます。",
     "workplace": "リモート",
@@ -11,12 +12,24 @@
   },
   {
     "recruit_id": 2,
-    "update": "20160110",
+    "update": "2016-01-03 10:00:00:000",
+    "end": false,
     "occupation": "フルスタックエンジニア",
     "businessContent": "弊社サービスのAWSのサーバ構築および保守、フロントエンドの開発を行います。",
     "workplace": "リモート",
     "employmentStatus": "業務委託", 
     "payment": "応相談(前職を考慮)",
     "skills": "AWS, Vue.js, Node.js等"
+  },
+  {
+    "recruit_id": 3,
+    "update": "2016-01-04 09:00:00:000",
+    "end": true,
+    "occupation": "サーバーエンジニア",
+    "businessContent": "弊社サービスのAWSのサーバ構築および保守を行います。",
+    "workplace": "リモート",
+    "employmentStatus": "業務委託", 
+    "payment": "応相談(前職を考慮)",
+    "skills": "AWS"
   }
 ]
