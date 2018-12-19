@@ -49,8 +49,18 @@ var makeTables = () => {
 var createTables = (tableNames) => {
   // table追加スクリプト
   if (tableNames.indexOf("news") === -1) {
-    let news = require("./news.js")
+    let news = require("./news/news.js")
     createTable(news, "news")
+  }
+
+  if (tableNames.indexOf("news_detail") === -1) {
+    let news = require("./news/news_detail.js")
+    createTable(news, "news_detail")
+  }
+
+  if (tableNames.indexOf("news_pickup") === -1) {
+    let news = require("./news/news_pickup.js")
+    createTable(news, "news_pickup")
   }
 }
 

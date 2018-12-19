@@ -14,7 +14,7 @@ AWS.config.update({
 });
 
 var dynamoDb = new AWS.DynamoDB();
-var docClient = new AWS.DynamoDB.DocumentClient();
+var docClient = new AWS.DynamoDB.DocumentClient({"convertEmptyValues": true});
 
 function getTableKeySchema(tableName) {
   return new Promise((resolve, reject) => {
@@ -71,9 +71,9 @@ function getTableItems(tableName, keys) {
   })
 }
 
-function putTableItems(tableName) {
+function putTableItems(tableName, folder) {
   return new Promise((resolve, reject) => {
-    let items = JSON.parse(fs.readFileSync("script/data/" + tableName + ".json", 'utf8'));
+    let items = JSON.parse(fs.readFileSync("script/data/" + folder + "/" + tableName + ".json", 'utf8'));
     let requestArray = []
 
     items.forEach((item) => {
@@ -98,7 +98,7 @@ function putTableItems(tableName) {
   })
 }
 
-async function putData(tableName) {
+async function putData(folder, tableName) {
   let tableKeySchema = await getTableKeySchema(tableName)
 
   let keys =[]
@@ -111,13 +111,13 @@ async function putData(tableName) {
     await deleteTableItems(tableName, tableItems)
   }
 
-  await putTableItems(tableName)
+  await putTableItems(tableName, folder)
 
   return true
 }
 
-function insertData(tableName) {
-  putData(tableName).then(() => {
+function insertData(folder, tableName) {
+  putData(folder, tableName).then(() => {
     console.log("Insert data to " + tableName + " table success")
   }).catch(err => {
     console.log("Insert data to " + tableName + " table fail")
@@ -129,9 +129,11 @@ function insertData(tableName) {
 // insert data
 let tables = 
 [
-  "news"
+  ["news", "news"],
+  ["news", "news_detail"],
+  ["news", "news_pickup"],
 ]
 
 tables.forEach(table => {
-  insertData(table)
+  insertData(table[0], table[1])
 })

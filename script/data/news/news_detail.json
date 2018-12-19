@@ -1,0 +1,37 @@
+[
+  {
+    "news_id": 1,
+    "page": 1,
+    "next_page": true,
+    "contents":
+      ""
+  },
+  {
+    "news_id": 1,
+    "page": 2,
+    "next_page": false,
+    "contents":
+      ""
+  },
+  {
+    "news_id": 2,
+    "page": 1,
+    "next_page": false,
+    "contents":
+      ""
+  },
+  {
+    "news_id": 3,
+    "page": 1,
+    "next_page": false,
+    "contents":
+      ""
+  },
+  {
+    "news_id": 4,
+    "page": 1,
+    "next_page": false,
+    "contents":
+      ""
+  }
+]
