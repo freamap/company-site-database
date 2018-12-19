@@ -1,0 +1,18 @@
+[
+  {
+    "recruit_id": 1,
+    "update": "20160103",
+    "occupation": "UI/UXデザイナー",
+    "workplace": "リモート",
+    "employmentStatus": "業務委託", 
+    "payment": "応相談(前職を考慮)"
+  },
+  {
+    "recruit_id": 2,
+    "update": "20160104",
+    "occupation": "フルスタックエンジニア",
+    "workplace": "リモート",
+    "employmentStatus": "業務委託", 
+    "payment": "応相談(前職を考慮)"
+  }
+]
