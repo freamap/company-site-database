@@ -2,6 +2,8 @@
   {
     "news_id": 1,
     "page": 1,
+    "create": "20160103",
+    "title": "ポートフォリオに「○○○○○○○」の開発実績を追加しました。",
     "next_page": true,
     "contents":
       ""
@@ -9,6 +11,8 @@
   {
     "news_id": 1,
     "page": 2,
+    "create": "20160103",
+    "title": "ポートフォリオに「○○○○○○○」の開発実績を追加しました。",
     "next_page": false,
     "contents":
       ""
@@ -16,6 +20,7 @@
   {
     "news_id": 2,
     "page": 1,
+    "create": "20160104",
     "next_page": false,
     "contents":
       ""
@@ -23,6 +28,7 @@
   {
     "news_id": 3,
     "page": 1,
+    "create": "20160105",
     "next_page": false,
     "contents":
       ""
@@ -30,6 +36,7 @@
   {
     "news_id": 4,
     "page": 1,
+    "create": "20160106",
     "next_page": false,
     "contents":
       ""
