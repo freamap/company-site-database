@@ -28,49 +28,6 @@ function getTableKeySchema(tableName) {
   })
 }
 
-function deleteTableItems(tableName, deleteItems) {
-  let requestArray = []
-  deleteItems.forEach(deleteItem => {
-    requestArray.push(
-      {
-        DeleteRequest: {
-          Key: deleteItem
-        }
-      }
-    )
-  }) 
-
-  return new Promise((resolve, reject) => {
-    let requestItems = {}
-    requestItems[tableName] = requestArray
-
-    docClient.batchWrite({RequestItems: requestItems}, function(err, data) {
-      if (err) {
-        reject(err)
-      } else {
-        resolve(data.Items)
-      }
-    })
-  })
-}
-
-function getTableItems(tableName, keys) {
-  let keysStr = ""
-  keys.forEach(key => {
-    keysStr += "," + key
-  })
-  keysStr = keysStr.slice(1)
-  return new Promise((resolve, reject) => {
-    docClient.scan({TableName: tableName, ProjectionExpression: keysStr}, function(err, data) {
-      if (err) {
-        reject(err)
-      } else {
-        resolve(data.Items)
-      }
-    })
-  })
-}
-
 function putTableItems(tableName, folder) {
   return new Promise((resolve, reject) => {
     let items = JSON.parse(fs.readFileSync("script/data/" + folder + "/" + tableName + ".json", 'utf8'));
@@ -105,11 +62,6 @@ async function putData(folder, tableName) {
   tableKeySchema.forEach(key => {
     keys.push(key.AttributeName)
   })
-
-  let tableItems = await getTableItems(tableName, keys)
-  if (tableItems.length) {
-    await deleteTableItems(tableName, tableItems)
-  }
 
   await putTableItems(tableName, folder)
 
