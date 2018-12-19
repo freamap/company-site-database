@@ -26,13 +26,11 @@ var getTables = () => {
 }
 
 var createTable = (params, tableName) => {
-  dynamodb.createTable(params, () => {
-    return (err, data) => {
-      if (err) {
-          console.error("Unable to create table:" + tableName + ". Error JSON:", JSON.stringify(err, null, 2));
-      } else {
-          console.log("Created table:" + tableName + ". Table description JSON:", JSON.stringify(data, null, 2));
-      }
+  dynamodb.createTable(params, function(err, data) {
+    if (err) {
+        console.error("Unable to create table:" + tableName + ". Error JSON:", JSON.stringify(err, null, 2));
+    } else {
+        console.log("Created table:" + tableName + ".");
     }
   });
 }
@@ -46,22 +44,15 @@ var makeTables = () => {
 }
 
 // table作成
-var createTables = (tableNames) => {
-  // table追加スクリプト
-  if (tableNames.indexOf("news") === -1) {
-    let news = require("./news/news.js")
-    createTable(news, "news")
-  }
+var createTables = (existTableNames) => {
+  let tables = require("../config/tables.js")
 
-  if (tableNames.indexOf("news_detail") === -1) {
-    let news = require("./news/news_detail.js")
-    createTable(news, "news_detail")
-  }
-
-  if (tableNames.indexOf("news_pickup") === -1) {
-    let news = require("./news/news_pickup.js")
-    createTable(news, "news_pickup")
-  }
+  tables.forEach(table => {
+    if (existTableNames.indexOf(table[1]) === -1) {
+      let news = require("./" + table[0] + "/" + table[1] + ".js")
+      createTable(news, table[1])
+    }
+  })
 }
 
 makeTables();

@@ -25,21 +25,24 @@ var getTables = () => {
   })
 }
 
-var deleteTables = (tableNames) => {
-  tableNames.forEach(tableName => {
-    let params = {
-      TableName : tableName
-    }
+var deleteTables = (existTableNames) => {
+  let tables = require("../config/tables.js")
 
-    dynamodb.deleteTable(params, function(err, data) {
-      if (err) {
-          console.error("Unable to delete " + tableName + " table. Error JSON:", JSON.stringify(err, null, 2));
-      } else {
-          console.log("Deleted " + tableName + " table. Table description JSON:", JSON.stringify(data, null, 2));
+  tables.forEach(table => {
+    if (existTableNames.indexOf(table[1]) !== -1) {
+      let params = {
+        TableName : table[1]
       }
-    });
-  
-  });
+
+      dynamodb.deleteTable(params, function(err, data) {
+        if (err) {
+            console.error("Unable to delete " + table[1] + " table. Error JSON:", JSON.stringify(err, null, 2));
+        } else {
+            console.log("Deleted " + table[1] + " table.");
+        }
+      });
+    }
+  })
 }
 
 getTables().then(tableNames => {

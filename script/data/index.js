@@ -127,12 +127,7 @@ function insertData(folder, tableName) {
 
 
 // insert data
-let tables = 
-[
-  ["news", "news"],
-  ["news", "news_detail"],
-  ["news", "news_pickup"],
-]
+let tables = require("../config/tables.js")
 
 tables.forEach(table => {
   insertData(table[0], table[1])
