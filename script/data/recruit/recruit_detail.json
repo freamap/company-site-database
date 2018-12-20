@@ -8,7 +8,8 @@
     "workplace": "リモート",
     "employmentStatus": "業務委託", 
     "payment": "応相談(前職を考慮)",
-    "skills": "HTML, CSS, JavaScript, Illustrator等"
+    "skills": "HTML, CSS, JavaScript, Illustrator等",
+    "status": 1
   },
   {
     "recruit_id": 2,
@@ -19,7 +20,8 @@
     "workplace": "リモート",
     "employmentStatus": "業務委託", 
     "payment": "応相談(前職を考慮)",
-    "skills": "AWS, Vue.js, Node.js等"
+    "skills": "AWS, Vue.js, Node.js等",
+    "status": 1
   },
   {
     "recruit_id": 3,
@@ -30,6 +32,7 @@
     "workplace": "リモート",
     "employmentStatus": "業務委託", 
     "payment": "応相談(前職を考慮)",
-    "skills": "AWS"
+    "skills": "AWS",
+    "status": 1
   }
 ]

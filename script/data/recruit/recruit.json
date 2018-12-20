@@ -5,7 +5,8 @@
     "occupation": "UI/UXデザイナー",
     "workplace": "リモート",
     "employmentStatus": "業務委託", 
-    "payment": "応相談(前職を考慮)"
+    "payment": "応相談(前職を考慮)",
+    "status": 1
   },
   {
     "recruit_id": 2,
@@ -13,7 +14,8 @@
     "occupation": "フルスタックエンジニア",
     "workplace": "リモート",
     "employmentStatus": "業務委託", 
-    "payment": "応相談(前職を考慮)"
+    "payment": "応相談(前職を考慮)",
+    "status": 1
   },
   {
     "recruit_id": 3,
@@ -21,6 +23,7 @@
     "occupation": "サーバーエンジニア",
     "workplace": "リモート",
     "employmentStatus": "業務委託", 
-    "payment": "応相談(前職を考慮)"
+    "payment": "応相談(前職を考慮)",
+    "status": 1
   }
 ]
