@@ -1,29 +1,32 @@
 [
   {
     "recruit_id": 1,
-    "update": "2016-01-03 09:00:00:000",
+    "update": "2016-01-03 09:00:00",
     "occupation": "UI/UXデザイナー",
     "workplace": "リモート",
     "employmentStatus": "業務委託", 
     "payment": "応相談(前職を考慮)",
-    "status": 1
+    "status": 1,
+    "order": 2
   },
   {
     "recruit_id": 2,
-    "update": "2016-01-03 10:00:00:000",
+    "update": "2016-01-03 10:00:00",
     "occupation": "フルスタックエンジニア",
     "workplace": "リモート",
     "employmentStatus": "業務委託", 
     "payment": "応相談(前職を考慮)",
-    "status": 1
+    "status": 1,
+    "order": 1
   },
   {
     "recruit_id": 3,
-    "update": "2016-01-04 09:00:00:000",
+    "update": "2016-01-04 09:00:00",
     "occupation": "サーバーエンジニア",
     "workplace": "リモート",
     "employmentStatus": "業務委託", 
     "payment": "応相談(前職を考慮)",
-    "status": 1
+    "status": 1,
+    "order": 3
   }
 ]

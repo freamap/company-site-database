@@ -6,7 +6,7 @@ module.exports = {
   AttributeDefinitions: [
     { AttributeName: "recruit_id", AttributeType: "N" },
     { AttributeName: "status", AttributeType: "N" },
-    { AttributeName: "update", AttributeType: "S" }
+    { AttributeName: "order", AttributeType: "N" }
   ],
   ProvisionedThroughput: {
     ReadCapacityUnits: 1, // 1項目200文字 * 10項目 * 1回/秒 = 2KB
@@ -14,14 +14,14 @@ module.exports = {
   },
   GlobalSecondaryIndexes: [
     {
-      IndexName: "SortUpdateIndex",
+      IndexName: "SortOrderIndex",
       KeySchema: [
         {
           AttributeName: "status",
           KeyType: "HASH"
         },
         {
-          AttributeName: "update",
+          AttributeName: "order",
           KeyType: "RANGE"
         }
       ],
