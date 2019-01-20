@@ -1,0 +1,41 @@
+[
+  {
+    "recruit_id": 1,
+    "update": "2016-01-03 09:00:00",
+    "end": false,
+    "occupation": "UI/UXデザイナー",
+    "businessContent": "弊社サービスのXXXXのデザインからコーディングを担当していただきます。",
+    "workplace": "リモート",
+    "employmentStatus": "業務委託", 
+    "payment": "応相談(前職を考慮)",
+    "skills": "HTML, CSS, JavaScript, Illustrator等",
+    "og_description": "OGP用の説明",
+    "status": 1
+  },
+  {
+    "recruit_id": 2,
+    "update": "2016-01-03 10:00:00",
+    "end": false,
+    "occupation": "フルスタックエンジニア",
+    "businessContent": "弊社サービスのAWSのサーバ構築および保守、フロントエンドの開発を行います。",
+    "workplace": "リモート",
+    "employmentStatus": "業務委託", 
+    "payment": "応相談(前職を考慮)",
+    "skills": "AWS, Vue.js, Node.js等",
+    "og_description": "OGP用の説明",
+    "status": 1
+  },
+  {
+    "recruit_id": 3,
+    "update": "2016-01-04 09:00:00",
+    "end": true,
+    "occupation": "サーバーエンジニア",
+    "businessContent": "弊社サービスのAWSのサーバ構築および保守を行います。",
+    "workplace": "リモート",
+    "employmentStatus": "業務委託", 
+    "payment": "応相談(前職を考慮)",
+    "skills": "AWS",
+    "og_description": "OGP用の説明",
+    "status": 1
+  }
+]
