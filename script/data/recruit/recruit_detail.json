@@ -9,6 +9,7 @@
     "employmentStatus": "業務委託", 
     "payment": "応相談(前職を考慮)",
     "skills": "HTML, CSS, JavaScript, Illustrator等",
+    "og_description": "OGP用の説明",
     "status": 1
   },
   {
@@ -21,6 +22,7 @@
     "employmentStatus": "業務委託", 
     "payment": "応相談(前職を考慮)",
     "skills": "AWS, Vue.js, Node.js等",
+    "og_description": "OGP用の説明",
     "status": 1
   },
   {
@@ -33,6 +35,7 @@
     "employmentStatus": "業務委託", 
     "payment": "応相談(前職を考慮)",
     "skills": "AWS",
+    "og_description": "OGP用の説明",
     "status": 1
   }
 ]
