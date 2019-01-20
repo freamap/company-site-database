@@ -1,32 +1,22 @@
 [
   {
     "recruit_id": 1,
-    "update": "2016-01-03 09:00:00",
+    "update": "2019-01-21 09:00:00",
     "occupation": "UI/UXデザイナー",
     "workplace": "リモート",
-    "employmentStatus": "業務委託", 
-    "payment": "応相談(前職を考慮)",
+    "employmentStatus": "アルバイト", 
+    "payment": "時給1000〜2000円(応相談)",
     "status": 1,
     "order": 2
   },
   {
     "recruit_id": 2,
-    "update": "2016-01-03 10:00:00",
-    "occupation": "フルスタックエンジニア",
+    "update": "2019-01-21 09:00:00",
+    "occupation": "プログラマー",
     "workplace": "リモート",
-    "employmentStatus": "業務委託", 
-    "payment": "応相談(前職を考慮)",
+    "employmentStatus": "アルバイト", 
+    "payment": "時給1000〜2000円(応相談)",
     "status": 1,
     "order": 1
-  },
-  {
-    "recruit_id": 3,
-    "update": "2016-01-04 09:00:00",
-    "occupation": "サーバーエンジニア",
-    "workplace": "リモート",
-    "employmentStatus": "業務委託", 
-    "payment": "応相談(前職を考慮)",
-    "status": 1,
-    "order": 3
   }
 ]
