@@ -34,6 +34,13 @@ function putTableItems(tableName, folder) {
     let requestArray = []
 
     items.forEach((item) => {
+      if (tableName === 'work_detail') {
+        let contents = fs.readFileSync("script/data/" + folder + "/contents/" + item.work_id + ".html", 'utf8')
+        contents = contents.replace(/\s\s+/g, "")
+        contents = contents.replace(/\n/g, "")
+        item = {...item, contents: contents}
+      }
+
       requestArray.push(
         {
           PutRequest: {
