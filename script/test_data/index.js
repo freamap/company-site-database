@@ -10,7 +10,7 @@ AWS.config.update({
   region: region,
   endpoint: endpoint,
   accessKeyId: access_key_id,
-  accessKeyId: secret_access_key_id
+  secretAccessKey: secret_access_key_id
 });
 
 var dynamoDb = new AWS.DynamoDB();
