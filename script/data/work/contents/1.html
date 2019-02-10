@@ -1,23 +1,53 @@
 <h3>開発の期間および技術について</h3>
 <div class="contents">
-  <div class='table'>
-    <section>
+  <div class='table margin-bottom-l'>
+    <div>
       <div class='title'>期間</div>
       <div class='body'>3ヶ月</div>
-    </section>
-    <section>
+    </div>
+    <div>
       <div class='title'>サーバ</div>
       <div class='body'>AWS Fargate</div>
-    </section>
-    <section>
+    </div>
+    <div>
       <div class='title'>開発言語</div>
       <div class='body'>Nuxt.js, Node.js(express)</div>
-    </section>
-    <section>
+    </div>
+    <div>
       <div class='title'>データベース</div>
       <div class='body'>AWS DynamoDB</div>
-    </section>
+    </div>
   </div>
+  <figure>
+    <figcaption>開発環境</figcaption>
+    <img src="https://freamap.co.jp/images/works/1/work-1-server.png"/>
+  </figure>
 </div>
-<h3>クラウドサービス(AWS)によるサーバ構築</h3>
-クラウドサービスであるAWS(アマゾンウェブサービス)を使用してサーバを構築しました。
+<h3>アピールポイント</h3>
+<h4>クラウドによるサーバ構築</h4>
+<div class="contents">
+  <p>
+    クラウドサービスであるAWS(アマゾンウェブサービス)を使用してサーバを構築しました。
+    その中でもサーバのアップデートなどの管理が不要となる「AWS Fargate」を使用しています。
+    24時間稼働している場合「AWS EC2」に比べて料金が高くなりますが、サーバの管理費用がかからないので「AWS Fargate」を採用しています。
+  </p>
+  <p>
+    CDN（Content Delivery Network）である「AWS CloudFront」を合わせて使用しているため高速にページを表示することができます。
+  </p>
+</div>
+<h4>Nuxt.jsによるSPAとSSR</h4>
+<div class="contents">
+    <p>
+      ホームページはSPA(シングルページアプリケーション)として稼働しています。
+      そのため、動きが早く、ページ遷移時にストレスを感じさせません。
+      また、SSR(サーバサイドレンダリング)することにより、SNSへシェアした際に任意の画像や文言を設定することができるようにしています。
+    </p>
+</div>
+<h4>「GitHub」と「AWS CodePipeline」を利用したデプロイ</h4>
+<div class="contents">
+    <p>
+      ホームページは「GitHub」による構成管理と、「AWS CodePipeline」を利用したデプロイ環境で開発を行なっています。
+      masterブランチへマージされると自動的にリリースされ、「AWS CodePipeline」の設定によりホームページを止めることなく最新の状態へアップデートします。
+    </p>
+</div>
+
